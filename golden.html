@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Golden retriever to corgi</title>
+
+    <style>
+
+    .header-outer {
+      height: 20vh; overflow: auto; width: 100%; overflow-y: hidden;
+    }
+
+    .header-inner {
+      /*Set width to be number of images times image width*/
+      width: 500vh; position: relative;
+    }
+
+    .thumbnail {
+      height: 20vh; position: relative; display: inline-block; float: left;
+    }
+
+
+
+    .image-original {
+      height: 40vh; overflow: auto; width: 100%;
+    }
+
+    .images-right {
+      height: 50%; overflow: auto; width: 100%; overflow-y: hidden;
+    }
+
+    .images-right-inner {
+      width: 400vh; position: relative;
+    }
+
+    .image {
+      height: 40vh; position: relative; display: inline-block; float: left;
+    }
+
+    .center {
+      display: block; margin-left: auto; margin-right: auto; height: 40vh;
+    }
+    </style>
+
+  </head>
+
+  <!-- Header to select image to investigate -->
+  <div class="header-outer">
+
+    <div class="header-inner">
+      <img src="images/test/golden/CWCMOixJzfz.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWBTaVapBiA.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWCK_-lvE_u.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CBTTjyknKi8.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWBbBVVPAgV.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/B0loVZwHoiy.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWCMwjCPWmF.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWCMV5ANsAH.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWCMxcaJouw.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWBTPK3pctI.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWCLFz-JI1v.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/Brl4F4vhySH.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWBCqmOoqhH.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/B4gA0gMnsrm.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/B07RdCBnOdr.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWBDpDvBCax.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWCLy6WPio_.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWCLTkjpRfV.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWCMFBIJlXr.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/BtR4S89hOJu.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/BsVjDUQBO4d.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWCLXldlSRW.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/B4sjBEInFUz.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWCN3ymP6Ha.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+      <img src="images/test/golden/CWCMbqovRU8.jpeg" class="thumbnail" onclick="updateImage(this.src)">
+    </div>
+
+  </div>
+
+  <!-- Visualize original image on left and training epochs on the right -->
+  <div class="image-original">
+
+    <img src="images/test/golden/CWCMOixJzfz.jpeg" class="center" id="original">
+
+  </div>
+
+  <div class="images-right">
+
+    <div class="images-right-inner">
+
+      <img src="images/epoch_10/CWCMOixJzfz_fake.png" class="image" id="epoch_10">
+      <img src="images/epoch_30/CWCMOixJzfz_fake.png" class="image" id="epoch_30">
+      <img src="images/epoch_50/CWCMOixJzfz_fake.png" class="image" id="epoch_50">
+      <img src="images/epoch_70/CWCMOixJzfz_fake.png" class="image" id="epoch_70">
+      <img src="images/epoch_90/CWCMOixJzfz_fake.png" class="image" id="epoch_90">
+      <img src="images/epoch_110/CWCMOixJzfz_fake.png" class="image" id="epoch_110">
+      <img src="images/epoch_130/CWCMOixJzfz_fake.png" class="image" id="epoch_130">
+      <img src="images/epoch_150/CWCMOixJzfz_fake.png" class="image" id="epoch_150">
+      <img src="images/epoch_170/CWCMOixJzfz_fake.png" class="image" id="epoch_170">
+      <img src="images/epoch_190/CWCMOixJzfz_fake.png" class="image" id="epoch_190">
+
+    </div>
+
+  </div>
+
+
+
+</html>
+
+
+<script type="text/javascript">
+
+function updateImage(src) {
+
+  img_name = src.split("/");
+  img_name = img_name[img_name.length - 1];
+
+  var image = document.getElementById("original");
+  image.src = "images/test/golden/" + img_name;
+
+  img_name = img_name.split(".")[0];
+
+  for (let i = 1; i < 21; i += 2) {
+    epoch = i * 10
+
+    var image = document.getElementById("epoch_" + epoch.toString());
+    image.src = "images/epoch_" + epoch.toString() + '/' + img_name + "_fake.png";
+
+  }
+
+}
+
+</script>
