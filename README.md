@@ -1,6 +1,6 @@
 # corgi2golden
 
-![Combined Thumbnail](https://github.com/HughChen/corgi2golden/raw/main/images/combine.gif)
+![Combined Thumbnail](https://github.com/HughChen/corgi2golden/raw/main/images/combine_final.gif)
 
 Visualizations of corgi to golden cyclegan.  In corgi.html we have the corgi to golden transformations.  In golden.html we have the golden to corgi transformations. 
 
